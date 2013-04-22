@@ -43,13 +43,13 @@ public class Repertoire extends Objet{
     }
     
     
-    public int calculTaille() throws Exceptions{
+    public int getTaille() throws Exceptions{
     	int taille = 0;
     	if(taille<0)
      	   throw new Exceptions("Pas de taille négative");
         else{
         	for(int i=0;i<=nbObjetReel;i++){
-        		taille = taille+listeObjet[i].calculTaille();
+        		taille = taille+listeObjet[i].getTaille();
         	
         	}
         	return taille;
