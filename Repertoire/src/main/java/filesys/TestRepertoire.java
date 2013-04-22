@@ -1,5 +1,25 @@
 package filesys;
 
+import org.junit.Test;
+
+import junit.framework.TestCase;
+
+public class TestRepertoire {
+	@Test
+	public void testCalculTaille() throws Exceptions {
+		Repertoire repertoire;
+		repertoire = new Repertoire ("rep1");
+		assert repertoire.calculTaille() >= 0;
+	}
+
+}
+
+
+
+
+
+/* package filesys;
+
 import junit.framework.TestCase;
 
 public class TestRepertoire extends TestCase {
@@ -21,3 +41,4 @@ public class TestRepertoire extends TestCase {
 	}
 
 }
+*/

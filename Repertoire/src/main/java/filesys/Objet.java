@@ -14,7 +14,7 @@ public abstract class Objet {
 	       return nom;
 	}
 	
-	public abstract int calculTaille();
+	public abstract int calculTaille() throws Exceptions;
 
 }
 
