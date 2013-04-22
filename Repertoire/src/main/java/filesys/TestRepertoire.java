@@ -1,16 +1,27 @@
 package filesys;
 
 import org.junit.Test;
+import static org.junit.Assert.*;
 
-import junit.framework.TestCase;
 
 public class TestRepertoire {
+	
 	@Test
 	public void testCalculTaille() throws Exceptions {
 		Repertoire repertoire;
 		repertoire = new Repertoire ("rep1");
 		assert repertoire.calculTaille() >= 0;
 	}
+	
+	@Test
+	public void testContenant() throws Exceptions {
+		
+		Repertoire repertoire = new Repertoire ("rep1");
+		Fichier f1 =  new Fichier("f1", 5);
+		repertoire.ajouterObjet(f1);
+		assertEquals(5, repertoire.calculTaille(), 0);
+	}
+
 
 }
 
