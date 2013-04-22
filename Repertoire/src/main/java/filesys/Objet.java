@@ -1,4 +1,3 @@
-//SYMY
 package filesys;
 
 public abstract class Objet {

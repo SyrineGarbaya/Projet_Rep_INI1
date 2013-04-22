@@ -1,4 +1,3 @@
-// SYSY
 package filesys;
 
 public class Repertoire extends Objet{
