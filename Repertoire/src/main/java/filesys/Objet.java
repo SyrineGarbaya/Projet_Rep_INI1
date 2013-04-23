@@ -15,7 +15,7 @@ public abstract class Objet {
 	* Constructor for Objects
 	* 
 	*/
-	public Objet (String nom)
+	public Objet(String nom)
 	{
 		this.nom = new String(nom);
 			
@@ -40,7 +40,7 @@ public abstract class Objet {
 	* get size of Objects
 	* @return int Size
 	*/	
-	public abstract int getTaille () ;
+	public abstract int getTaille () throws Exceptions;
 
 }
 

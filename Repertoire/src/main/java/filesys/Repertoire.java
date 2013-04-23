@@ -1,5 +1,7 @@
 package filesys;
-
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.ListIterator;
     /**
      * Repertoire Class
      * @author me
@@ -8,9 +10,8 @@ package filesys;
      */
 
 public class Repertoire extends Objet{
-	public final int nbObjet = 100;
-	private int nbObjetReel = 0; 
-	private Objet[] listeObjet= new Objet[nbObjet];
+
+	private ArrayList<Objet> arrList= new ArrayList<Objet>(); 
 	
 	
     /**
@@ -28,18 +29,35 @@ public class Repertoire extends Objet{
      * @return  
      */
 
-    public boolean ajouterObjet(Objet objet)
+    public void ajouterObjet(Objet objet)
     {
-    	if (objet!= null && this!=objet && nbObjetReel< nbObjet && Exist(objet)){
+    /**	if (objet!= null && this!=objet && nbObjetReel< nbObjet && Exist(objet)){
     		listeObjet[nbObjetReel] = objet;
     		nbObjetReel++;
     		return true;
     	}
     	else 
     		return false;	
+	**/
+		if(objet == null) throw new IllegalArgumentException("### Object Null ####");
+		else if (this!=objet) throw new IllegalArgumentException("### Please dont add me, I'm not schizophrenic ####");
+		else if (existsWithSameName(objet)) throw new IllegalArgumentException("### Please change my  name ####");
+		else {
+		arrList.add(objet);
+		}
+		
     }
     
-    public boolean Exist(Objet objet)
+	
+	public boolean existsWithSameName(Objet objet){
+	 Iterator<Objet> itr = arrList.iterator();
+		while (itr.hasNext()) {
+		Objet element = itr.next();
+			if(element.getNom().equals(objet.getNom()))return true;
+		}
+		return false;
+	}
+/**    public boolean Exist(Objet objet)
     {
     	for(int i=0; i <= nbObjetReel; i++ ){
     		if (objet == listeObjet[i]){
@@ -47,21 +65,19 @@ public class Repertoire extends Objet{
     		}
     	}
     	return true;  	
-    }
+    }**/
     
-    
+       @Override
     public int getTaille() throws Exceptions{
     	int taille = 0;
-    	if(taille<0)
-     	   throw new Exceptions("Pas de taille négative");
-        else{
-        	for(int i=0;i<=nbObjetReel;i++){
-        		taille = taille+listeObjet[i].getTaille();
-        	
-        	}
-        	return taille;
-        	
-        }
+    	
+        Iterator<Objet> itr = arrList.iterator();
+		while (itr.hasNext()) {
+			Objet element = itr.next();
+			taille += element.getTaille();
+		}
+		
+		return taille;
     	
     }
    

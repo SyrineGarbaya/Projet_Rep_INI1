@@ -1,17 +1,18 @@
 package filesys;
-	
+
 	/**
      * Class Fichier
      * @author me
      * 
      *   
      */
-public class Fichier extends Objet {
+public class Fichier extends Objet{
 
     private int taille = 0;
     
-    public Fichier(String nom, int taille)
-    {
+
+    public Fichier(String nom, int taille){
+    
        super(nom); // fait appel au constructeur de l'objet 
 		if(taille<0){
 			throw new IllegalArgumentException("### Pas de taille négative ####");
@@ -24,7 +25,7 @@ public class Fichier extends Objet {
 	*@return int size
 	**/
    @Override
-    public int getTaille(){
+    public int getTaille() throws Exceptions{
     	return taille;
     }
 }
