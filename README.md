@@ -1,6 +1,6 @@
 TEST
 =========
-This is a java project to learn about Maven / GIT / Collections ...add a lot of other thinks
+This is a java project to learn about Maven / GIT / Collections ...add a lot of other things
 
 License
 -------
