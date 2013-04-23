@@ -33,7 +33,7 @@ public class Repertoire extends Objet{
     {
 
 		if(objet == null) throw new IllegalArgumentException("### Object Null ####");
-		else if (this!=objet) throw new IllegalArgumentException("### Please dont add me, I'm not schizophrenic ####");
+		else if (this==objet) throw new IllegalArgumentException("### Please dont add me, I'm not schizophrenic ####");
 		else if (existsWithSameName(objet)) throw new IllegalArgumentException("### Please change my  name ####");
 		else {
 		arrList.add(objet);
