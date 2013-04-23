@@ -10,6 +10,6 @@ You may use under the terms of the my License.
 
 Code Layout
 -----------
-You need Mave
+You need Maven
 
 Please try mvn package to compile
