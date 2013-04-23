@@ -14,7 +14,7 @@ public class Fichier extends Objet {
 	  
        this.taille=taille;
     }
-   
+   @Override
     public int getTaille(){
     	return taille;
     }

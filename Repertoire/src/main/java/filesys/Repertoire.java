@@ -1,5 +1,12 @@
 package filesys;
 
+    /**
+     * Repertoire Class
+     * @author me
+     * 
+     * 
+     */
+
 public class Repertoire extends Objet{
 	public final int nbObjet = 100;
 	private int nbObjetReel = 0; 
