@@ -25,7 +25,7 @@ public class Fichier extends Objet{
 	*@return int size
 	**/
    @Override
-    public int getTaille() throws Exceptions{
+    public int getTaille(){
     	return taille;
     }
 }

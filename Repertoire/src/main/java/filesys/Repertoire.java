@@ -61,7 +61,7 @@ public class Repertoire extends Objet{
 	*@return  int size
 	**/
        @Override
-    public int getTaille() throws Exceptions{
+    public int getTaille(){
     	int taille = 0;
     	
         Iterator<Objet> itr = arrList.iterator();

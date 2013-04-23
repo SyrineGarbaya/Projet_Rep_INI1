@@ -40,7 +40,7 @@ public abstract class Objet {
 	* get size of Objects
 	* @return int Size
 	*/	
-	public abstract int getTaille () throws Exceptions;
+	public abstract int getTaille ();
 
 }
 
