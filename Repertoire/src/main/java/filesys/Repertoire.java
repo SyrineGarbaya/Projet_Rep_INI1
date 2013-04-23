@@ -23,22 +23,15 @@ public class Repertoire extends Objet{
     }
 
     /**
-     * Methods for Repertoire
+     * Add object to Repertoire
      * 
-     * @param 
-     * @return  
+     * @param the object to add
+     * @return  void
      */
 
     public void ajouterObjet(Objet objet)
     {
-    /**	if (objet!= null && this!=objet && nbObjetReel< nbObjet && Exist(objet)){
-    		listeObjet[nbObjetReel] = objet;
-    		nbObjetReel++;
-    		return true;
-    	}
-    	else 
-    		return false;	
-	**/
+
 		if(objet == null) throw new IllegalArgumentException("### Object Null ####");
 		else if (this!=objet) throw new IllegalArgumentException("### Please dont add me, I'm not schizophrenic ####");
 		else if (existsWithSameName(objet)) throw new IllegalArgumentException("### Please change my  name ####");
@@ -48,7 +41,11 @@ public class Repertoire extends Objet{
 		
     }
     
-	
+	/**
+	*Check if object exisits with same name
+	*@param the object to check 
+	*@return  true if exists
+	**/
 	public boolean existsWithSameName(Objet objet){
 	 Iterator<Objet> itr = arrList.iterator();
 		while (itr.hasNext()) {
@@ -57,16 +54,12 @@ public class Repertoire extends Objet{
 		}
 		return false;
 	}
-/**    public boolean Exist(Objet objet)
-    {
-    	for(int i=0; i <= nbObjetReel; i++ ){
-    		if (objet == listeObjet[i]){
-    			return false;
-    		}
-    	}
-    	return true;  	
-    }**/
-    
+
+    /**
+	* Get size of a folder
+	*@param void 
+	*@return  int size
+	**/
        @Override
     public int getTaille() throws Exceptions{
     	int taille = 0;
