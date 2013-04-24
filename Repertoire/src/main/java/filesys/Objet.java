@@ -1,19 +1,18 @@
 package filesys;
 
 
-    /**
-     * Object abstract Class to generate Repertoire/Fichier
-     * @author me
-     * 
-     *   
-     */
+/**
+ * Object abstract Class to generate Repertoire/Fichier
+ * @author Naha Myriam & Garbaya Syrine
+ * @version Mercredi 24 Avril
+ *   
+*/
 
 public abstract class Objet {
 	private String nom;
 
 	/**
 	* Constructor for Objects
-	* 
 	*/
 	public Objet(String nom)
 	{

@@ -2,12 +2,12 @@ package filesys;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.ListIterator;
-    /**
-     * Repertoire Class
-     * @author me
-     * 
-     * 
-     */
+/**
+ * Repertoire Class
+ * @author Naha Myriam & Garbaya Syrine
+ * @version Mercredi 24 Avril
+ * 
+*/
 
 public class Repertoire extends Objet{
 
@@ -34,7 +34,7 @@ public class Repertoire extends Objet{
 
 		if(objet == null) throw new IllegalArgumentException("### Object Null ####");
 		else if (this==objet) throw new IllegalArgumentException("### Please dont add me, I'm not schizophrenic ####");
-		else if (existsWithSameName(objet)) throw new IllegalArgumentException("### Please change my  name ####");
+		else if (existsWithSameName(objet)) throw new IllegalArgumentException("### Please change my name ####");
 		else {
 		arrList.add(objet);
 		}
@@ -42,7 +42,7 @@ public class Repertoire extends Objet{
     }
     
 	/**
-	*Check if object exisits with same name
+	*Check if object exisits with the same name
 	*@param the object to check 
 	*@return  true if exists
 	**/

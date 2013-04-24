@@ -1,11 +1,12 @@
 package filesys;
+/**
+ * Fichier Class.
+ * Give the size of the file.
+ * 
+ * @author Naha Myriam & Garbaya Syrine
+ * @version Mercredi 24 Avril
+ */
 
-	/**
-     * Class Fichier
-     * @author me
-     * 
-     *   
-     */
 public class Fichier extends Objet{
 
     private int taille = 0;
@@ -13,14 +14,14 @@ public class Fichier extends Objet{
 
     public Fichier(String nom, int taille){
     
-       super(nom); // fait appel au constructeur de l'objet 
+       super(nom);  
 		if(taille<0){
 			throw new IllegalArgumentException("### Pas de taille négative ####");
 		}
 	  this.taille=taille;
     }
+	
 	/**
-	*
 	*get size of Fichier
 	*@return int size
 	**/
